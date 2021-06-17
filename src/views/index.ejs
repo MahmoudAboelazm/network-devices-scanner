@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>test</title>
+  <link rel="stylesheet" type="text/css"   href="css/style.css">
+</head>
+
+<body onload="n()">
+  <main>
+    <div id="devices-container" onclick="n()" ></div>
+    <table >
+      <thead>
+        <tr>
+          <th>Ip</th>
+          <th>Mac</th>
+        </tr>
+      </thead>
+      <tbody id="devices" ></tbody>
+
+    </table>
+  </main>
+</body>
+<script>
+  const baseUrl = "<%= baseUrl %>"
+  const n = async () => {
+  const container = document.getElementById("devices-container");
+  container.innerHTML = "Loading...";
+  const response = await fetch(baseUrl + "/update")
+    .then((response) => response.json())
+    .then((data) => data);
+  container.innerHTML = "Devices Recieved";
+  renderDevices(response);
+};
+const renderDevices = (response) => {
+  const devicesList = document.getElementById("devices");
+  // Remove the old devices when refresh
+  while (devicesList.firstChild) {
+    devicesList.removeChild(devicesList.firstChild);
+  }
+  // Adding new devices
+  response.map((device) => {
+    let tr = document.createElement("tr");
+    let deviceIp = document.createElement("td");
+    deviceIp.innerHTML = device.ip;
+    tr.appendChild(deviceIp);
+
+    let deviceMac = document.createElement("td");
+    deviceMac.innerHTML = device.mac;
+    tr.appendChild(deviceMac);
+    return devicesList.appendChild(tr);
+  });
+};
+</script>
+
+</html>
