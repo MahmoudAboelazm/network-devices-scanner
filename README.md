@@ -1,6 +1,6 @@
 # Network Devices Scanner
 
-> Get the ips and mac adrresses of all devices that running on your local network, the app can't deploy to any server on the internet.
+> Get the ips and mac addresses of all devices that running on your local network, the app can't deploy to any server on the internet.
 
 
 ## Usage:
