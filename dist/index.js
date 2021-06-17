@@ -20,7 +20,6 @@ dotenv_1.default.config();
 const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const app = express_1.default();
     app.use(express_1.default.static("public"));
-    console.log(process.env.TEST);
     app.set("views", "./src/views");
     app.set("view engine", "ejs");
     app.use(express_1.default.static("./src/public"));

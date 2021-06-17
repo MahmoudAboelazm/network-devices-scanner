@@ -1,1 +1,0 @@
-{"version":3,"file":"MovieRouter.js","sourceRoot":"","sources":["../../src/routers/MovieRouter.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;AAAA,qCAAiC;AACjC,4EAA8D;AAC9D,MAAM,YAAY,GAAG,gBAAM,EAAE,CAAC;AAC9B,YAAY,CAAC,GAAG,CAAC,GAAG,EAAE,gBAAgB,CAAC,UAAU,CAAC,CAAC;AACnD,YAAY,CAAC,GAAG,CAAC,SAAS,EAAE,gBAAgB,CAAC,MAAM,CAAC,CAAC;AACrD,kBAAe,YAAY,CAAC"}

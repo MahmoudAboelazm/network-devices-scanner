@@ -7,7 +7,7 @@ dotenv.config();
 const main = async () => {
   const app = express();
   app.use(express.static("public"));
-  console.log(process.env.TEST);
+
   app.set("views", "./src/views");
   app.set("view engine", "ejs");
   app.use(express.static("./src/public"));
